@@ -1,13 +1,22 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.custom-footer {
+  position: fixed; /* Fixes the footer to the bottom */
+  bottom: 0;
+  width: 100%;
+  background-color: #343a40; /* Dark background (Bootstrap dark color) */
+  color: white; /* White text */
+  padding: 1rem 0; /* Add vertical padding */
+  text-align: center;
+  z-index: 1000; /* Ensures it sits on top */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Default width (for larger screens) */
+.card-custom {
+  width: 90%;  /* This will apply to all screens unless overridden */
+}
+
+/* On small screens (width less than 576px or 'sm' breakpoint in Bootstrap) */
+@media (max-width: 576px) {
+  .card-custom {
+    width: 32rem;
+  }
 }
