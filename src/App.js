@@ -3,6 +3,7 @@ import './App.css';
 import Footer from './pages/Footer';
 import Navbar from "./pages/Navbar"
 import Homepage from "./pages/Homepage"
+import Profile from './pages/Profile';
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       <header><Navbar/></header>
        
        <main>
-            <Homepage/>
+            {/* <Homepage/> */}
+            <Profile/>
        </main>
 
        <footer className='custom-footer'><Footer/></footer>

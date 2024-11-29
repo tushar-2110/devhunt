@@ -11,8 +11,8 @@ function ColorSchemesExample() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="home">Home</Nav.Link>
-            <Nav.Link href="features">Profile</Nav.Link>
-            <Nav.Link href="pricing">Search Users</Nav.Link>
+            <Nav.Link href="profile">Profile</Nav.Link>
+            <Nav.Link href="#">Search Users</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
