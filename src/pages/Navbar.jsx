@@ -1,17 +1,18 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { NavLink } from 'react-router-dom';
 
-function ColorSchemesExample() {
+function NavBar() {
   return (
     <Navbar expand="lg" bg="primary" data-bs-theme="dark">
       <Container>
-        <Navbar.Brand href="#home">DevHunt</Navbar.Brand>
+        <Navbar.Brand  >DevHunt</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="home">Home</Nav.Link>
-            <Nav.Link href="profile">Profile</Nav.Link>
+            <Nav.Link as={NavLink} to="/" >Home</Nav.Link>
+            <Nav.Link as={NavLink} to="/profile">Profile</Nav.Link>
             <Nav.Link href="#">Search Users</Nav.Link>
           </Nav>
         </Navbar.Collapse>
@@ -20,4 +21,4 @@ function ColorSchemesExample() {
   );
 }
 
-export default ColorSchemesExample;
+export default NavBar;

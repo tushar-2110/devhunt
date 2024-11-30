@@ -1,19 +1,19 @@
 import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+
 
 function Post() {
   return (
-    <Card className='m-2 card-custom' >
-      <Card.Img variant="top" src="https://assets.bitdegree.org/online-learning-platforms/storage/media/2018/08/what-is-a-web-developer.jpg" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Know More</Button>
-      </Card.Body>
-    </Card>
+    <div className='border border-2 rounded m-1 w-100 shadow-lg' style={{height:"630px"}}>
+      <div className='post-headline border m-2'>
+        <p>Sample text</p>
+       </div> 
+       <div className='border mx-2 ' style={{height:"400px"}}>
+             <h1>img</h1>        
+       </div>
+       <div className='border m-2 h-25'>
+           <h1>text</h1>
+       </div>
+    </div>
   );
 }
 
