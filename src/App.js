@@ -16,7 +16,7 @@ function App() {
         <main>
           <Routes>
             {/* Updated to use "path" and removed "exact" */}
-            <Route path="/profile" element={<Profile />} />
+            <Route path="/profile/:id" element={<Profile />} />
             <Route path="/" element={<Homepage />} />
           </Routes>
         </main>
