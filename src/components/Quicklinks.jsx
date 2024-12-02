@@ -1,16 +1,25 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { Button,Image } from 'react-bootstrap'
+import CreatePost from './CreatePost'
 
 const Quicklinks = () => {
+
+  const [modal,setModal]=useState(false);
+
   return (
     <div className='w-100 border border-2 border-dark rounded m-2 d-none d-md-block d-flex justify-content-center ' style={{height:"600px"}}>
            
            <h1 className='text-center bg-primary text-white rounded'>Profile Section</h1>
            <div className=' mt-5 d-flex justify-content-around'>
 
-           <Button variant="outline-success">My Profile</Button>
-           <Button variant="outline-success">Create Post</Button>
+           <Button variant="outline-success" >My Profile</Button>
+           <Button variant="outline-success" onClick={()=>setModal(!modal)}>Create Post</Button>
            <Button variant="outline-success">My Profile</Button>  
+             
+
+             {modal&&<CreatePost modal={modal} setModal={setModal}/>}
+             {/* {console.log(modal)} */}
+
            </div>
 
            <div className=''>

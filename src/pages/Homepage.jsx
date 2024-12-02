@@ -8,31 +8,30 @@ import Quicklinks from '../components/Quicklinks';
 
 const Homepage = () => {
   return (
-    <div >
+    <div className="homepage">
       <Container fluid>
-        {/* Row with centered columns */}
+        {/* Main Row for Homepage Layout */}
         <Row className="g-3 justify-content-center">
-          
+          {/* About Section */}
           <Col md={3} sm={6} xs={12} className="d-flex flex-column align-items-center">
-            
-            
-               <About/>
-            
-            
+            <aside className="about-section">
+              <About />
+            </aside>
           </Col>
-          
+
+          {/* Post Section */}
           <Col md={6} sm={6} xs={12} className="d-flex flex-column align-items-center">
-            
-           
+            <main className="post-section">
               <Post />
-              <Post/>
-            
-           
+              <Post />
+            </main>
           </Col>
+
+          {/* Quicklinks Section */}
           <Col md={3} sm={6} xs={12} className="d-flex flex-column align-items-center">
-            
-            <Quicklinks/>
-             
+            <aside className="quicklinks-section">
+              <Quicklinks />
+            </aside>
           </Col>
         </Row>
       </Container>
