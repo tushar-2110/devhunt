@@ -12,9 +12,9 @@ const Quicklinks = () => {
            <h1 className='text-center bg-primary text-white rounded'>Profile Section</h1>
            <div className=' mt-5 d-flex justify-content-around'>
 
-           <Button variant="outline-success" >My Profile</Button>
+         {/* /  <Button variant="outline-success" >My Profile</Button> */}
            <Button variant="outline-success" onClick={()=>setModal(!modal)}>Create Post</Button>
-           <Button variant="outline-success">My Profile</Button>  
+           {/* <Button variant="outline-success">My Profile</Button>   */}
              
 
              {modal&&<CreatePost modal={modal} setModal={setModal}/>}

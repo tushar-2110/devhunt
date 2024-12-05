@@ -13,7 +13,7 @@ function NavBar() {
           <Nav className="me-auto">
             <Nav.Link as={NavLink} to="/" >Home</Nav.Link>
             <Nav.Link as={NavLink} to="/profile/:id">Profile</Nav.Link>
-            <Nav.Link href="#">Search Users</Nav.Link>
+            <Nav.Link href="#">Login/Signup</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

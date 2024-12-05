@@ -1,14 +1,19 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import Image from 'react-bootstrap/Image';
+import CreateProfile from '../components/CreateProfile';
 
 const Profile = () => {
   const technicalSkills = ["React", "Node.js", "JavaScript", "HTML", "CSS"];
   const nonTechnicalSkills = ["Problem-Solving", "Teamwork", "Time Management"];
   const tools = ["Git", "Visual Studio Code", "Figma"];
 
+  const [modal,setModal]=useState(false);
+
   return (
     <div className="m-4" style={{ height: '100vh' }}>
+
+       {modal&&<CreateProfile modal={modal} setModal={setModal} />}
 
        <div className='d-none d-sm-block' style={{ height: '100vh' }}>
        <Container style={{ height: '100%' }}>
@@ -16,7 +21,8 @@ const Profile = () => {
           {/* Left Column: Profile Details */}
           <Col xs={12} md={4} className="h-75" style={{ border: '2px solid #343a40', padding: '20px' }}>
             {/* Profile Image */}
-            <div className="d-flex justify-content-center h-50">
+            <div className="d-flex justify-content-around h-50">
+              <Button onClick={()=>setModal(!modal)} variant="outline-dark h-25 mt-5">edit profile</Button>
               <Image
                 src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 className="img-fluid h-75 w-50"
@@ -43,6 +49,7 @@ const Profile = () => {
 
             {/* Personal Information */}
             <div className="d-flex align-items-center justify-content-center mt-3 border border-2 border-dark rounded p-3">
+             
               <div>
                 <p className="fw-bold">Name: Tushar Sharma</p>
                 <p className="fw-bold">Email: tusharsharma@example.com</p>
